@@ -80,12 +80,12 @@ export default function WordPressDebug() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      <Button
+      {/* <Button
         onClick={() => setIsOpen(!isOpen)}
         className={`${wpDisabled ? "bg-gray-500" : "bg-gray-800 hover:bg-gray-700"} text-white`}
       >
         WP {wpDisabled ? "Disabled" : "Debug"}
-      </Button>
+      </Button> */}
 
       {isOpen && (
         <div className="absolute bottom-12 right-0 w-96 bg-white p-4 rounded-lg shadow-lg border border-gray-200">

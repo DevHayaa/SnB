@@ -67,7 +67,7 @@ export default function Navbar() {
           </div>
 
           {/* Navigation links centered */}
-          <div className="hidden md:flex flex-1 justify-center flex-wrap">
+          <div className="hidden md:flex flex-1 justify-center ml-[-200px] flex-wrap">
             <nav className="flex space-x-4">
               {menuItems.map((item) => (
                 <Link 

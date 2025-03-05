@@ -46,30 +46,7 @@ export default function AboutUsPage() {
           </div>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-teal-700 mb-6 text-center">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
-                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden">
-                  <Image
-                    src=""
-                    alt="Team Member"
-                    width={128}
-                    height={128}
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-1">John Doe</h3>
-                <p className="text-teal-700 font-medium mb-3">Founder & CEO</p>
-                <p className="text-gray-700 text-sm">
-                  With over 15 years of experience in bidding and recruitment, John founded SNB Alliance to help
-                  professionals excel in this field.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+       
 
         <div className="mt-16 text-center">
           <Link href="/">
