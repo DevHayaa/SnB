@@ -1,0 +1,11 @@
+const { getPost } = require('../../lib/wordpress');
+
+describe('getPost', () => {
+    it('should return a post object', async () => {
+        const postId: number = 1;
+        const post = await getPost(postId);
+        expect(post).toHaveProperty('id');
+        expect(post).toHaveProperty('title');
+        expect(post).toHaveProperty('content');
+    });
+});
