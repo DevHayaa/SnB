@@ -126,7 +126,7 @@ export default async function Home() {
         {/* Content Container */}
         <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-[#f8a02e] mb-4">
-            {homeData.hero.title}
+          EMPOWERING PROFESSIONALS IN <br /> BIDDING & RECRUITMENT
           </h1>
           <p className="text-white text-lg md:text-xl max-w-3xl mx-auto mb-8">
             {homeData.hero.subtitle}
