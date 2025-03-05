@@ -115,26 +115,8 @@ export default async function Home() {
 
       <Suspense fallback={<HomeLoading />}>
         {/* Hero Section */}
-        <section className="relative w-full to-teal-600 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="a" gradientTransform="rotate(90)">
-                  <stop offset="0%" stopColor="#ffffff" />
-                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              {Array.from({ length: 10 }).map((_, i) => (
-                <path
-                  key={i}
-                  d={`M${i * 100},0 Q${i * 100 + 50},${500 + Math.sin(i) * 200} ${i * 100},1000`}
-                  fill="none"
-                  stroke="url(#a)"
-                  strokeWidth="2"
-                />
-              ))}
-            </svg>
-          </div>
+        <section className="relative w-full to-teal-600 overflow-hidden bg-[url('/homeBanner.png')]">
+         
           <div
           className="container mx-auto px-4 py-16 md:py-24 text-center relative z-10 bg-cover bg-center bg-no-repeat"
           
