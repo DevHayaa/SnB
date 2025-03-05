@@ -47,3 +47,8 @@
   --ring: 173 80% 40%;
 }
 
+@layer base {
+  html, body {
+    @apply overflow-x-hidden w-full;
+  }
+}
