@@ -67,9 +67,13 @@ export default function Navbar() {
 
           {/* Navigation links centered */}
           <div className="hidden md:flex flex-1 justify-center">
-            <nav className="flex space-x-8">
+            <nav className="flex space-x-6">
               {menuItems.map((item) => (
-                <Link key={item.id} href={item.url} className=" hover:text-teal-700 font-medium">
+                <Link 
+                  key={item.id} 
+                  href={item.url} 
+                  className="text-[15px] font-medium hover:text-teal-700"
+                >
                   {item.title}
                 </Link>
               ))}
@@ -87,12 +91,12 @@ export default function Navbar() {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-3">
               {menuItems.map((item) => (
                 <Link
                   key={item.id}
                   href={item.url}
-                  className="text-gray-600 hover:text-teal-700 font-medium px-3 py-2"
+                  className="text-gray-600 text-[15px] hover:text-teal-700 font-medium px-3 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.title}

@@ -131,44 +131,37 @@ export default async function Home() {
 
         {/* What is SNB Alliance Section */}
         <section className="py-16 container mx-auto px-4">
-      <div className="flex flex-col md:flex-row items-center gap-8">
-        {/* Left Side - Images */}
-        <div className="md:w-1/2 flex gap-4 relative">
-          {/* Main Large Image */}
-          <div className="w-3/5">
-            <Image
-              src="/path-to-image1.jpg"
-              alt="SNB Alliance Team"
-              width={500}
-              height={400}
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-          {/* Overlapping Small Image */}
-          <div className="absolute bottom-0 left-20 w-2/5 hidden md:block">
-            <Image
-              src="/path-to-image2.jpg"
-              alt="Discussion"
-              width={250}
-              height={200}
-              className="rounded-lg shadow-lg border-4 border-white"
-            />
-          </div>
-        </div>
+        <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left Side - Images */}
+            <div className="md:w-1/2 flex justify-center relative">
+                {/* Main Large Image */}
+                <div className="">
+                    <img
+                        src="/about.png"
+                        alt="SNB Alliance Team"
+                        height={450}
+                        className="max-w-[900px]"
+                    />
+                </div>
+            </div>
 
-        {/* Right Side - Text Content */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold text-teal-700 mb-6">{homeData.about.title}</h2>
-          <div
-            className="text-gray-700 space-y-4"
-            dangerouslySetInnerHTML={{ __html: parseWordPressContent(homeData.about.content) }}
-          />
+            {/* Right Side - Text Content */}
+            <div className="md:w-1/2">
+                <h2 className="text-4xl font-bold text-teal-700 mb-6">
+                    {homeData.about.title}
+                </h2>
+                <div
+                    className="text-gray-700 text-lg leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: parseWordPressContent(homeData.about.content) }}
+                />
+            </div>
         </div>
-      </div>
     </section>
 
+
+
         {/* Why Us Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-2/3">
@@ -186,11 +179,11 @@ export default async function Home() {
               </div>
               <div className="md:w-1/3">
                 <Image
-                  src=""
+                  src="/whyus.png"
                   alt="Professional Woman"
                   width={300}
                   height={400}
-                  className="rounded-lg shadow-lg"
+                  className=""
                 />
               </div>
             </div>
