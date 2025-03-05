@@ -1,10 +1,11 @@
 import { Suspense } from "react"
 import Image from "next/image"
-import { Check } from "lucide-react"
+import { Book, Building, Check } from "lucide-react"
 import Navbar from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import { getHomePageData, getCertifications, parseWordPressContent } from "@/lib/wordpress"
 import HomeLoading from "@/components/home-loading"
+import { Certificate } from "crypto"
 
 // Update the Home component to handle errors better
 export default async function Home() {
@@ -229,52 +230,50 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-[#f8a02e] rounded-lg p-8 h-full w-4/5 md:w-3/4 lg:w-2/3 mx-auto flex flex-col"   style={{ borderBottomRightRadius: "100px", borderTopLeftRadius: "100px" }}
             >
-              <h3 className="text-2xl font-bold text-black mb-4 text-center">For Individuals</h3>
-              <p className="text-black mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">For Individuals</h3>
+              <p className="text-white mb-6">
                 Structured learning programs specifically designed to help you thrive in the bidding and recruitment
                 industries. Whether you're a novice or an expert, our courses provide the knowledge and skills you need.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="bg-white p-2 rounded-full">
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div className="p-2 rounded-full">
+                    {/* <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect width="24" height="24" fill="white" />
                       <path d="M12 6V18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
                       <path d="M6 12H18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
+                    </svg> */}
+                    <Book className="text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black">Self-Paced Study:</h4>
-                    <p className="text-sm text-black">Learn at your own pace with access to comprehensive materials.</p>
+                    <h4 className="font-bold text-white">Self-Paced Study:</h4>
+                    <p className="text-sm text-white">Learn at your own pace with access to comprehensive materials.</p>
                     </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="bg-white p-2 rounded-full">
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div className="p-2 rounded-full">
+                    {/* <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect width="24" height="24" fill="white" />
                       <path d="M12 6V18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
                       <path d="M6 12H18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
+                    </svg> */}
+                    <Building className="text-white"/>
                   </div>
                   <div>
-                    <h4 className="font-bold text-black">Instructor-Led Training:</h4>
-                    <p className="text-sm text-black">Interactive, expert-led sessions for hands-on learning.</p>
+                    <h4 className="font-bold text-white">Instructor-Led Training:</h4>
+                    <p className="text-sm text-white">Interactive, expert-led sessions for hands-on learning.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="bg-white p-2 rounded-full">
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" fill="white" />
-                      <path d="M12 6V18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                      <path d="M6 12H18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
+                  <div className="p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-book-open-check text-white"><path d="M12 21V7"/><path d="m16 12 2 2 4-4"/><path d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3"/></svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-black">Mock Exams:</h4>
-                    <p className="text-sm text-black">
+                    <h4 className="font-bold text-white">Mock Exams:</h4>
+                    <p className="text-sm text-white">
                       Prepare for certification exams with practice tests that mimic the real thing.
                     </p>
                   </div>
@@ -291,12 +290,8 @@ export default async function Home() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="bg-white p-2 rounded-full">
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" fill="white" />
-                      <path d="M12 6V18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                      <path d="M6 12H18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
+                  <div className="p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-presentation text-white"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>
                   </div>
                   <div>
                     <h4 className="font-bold text-white">Customizable Corporate Training:</h4>
@@ -305,12 +300,8 @@ export default async function Home() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="bg-white p-2 rounded-full">
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" fill="white" />
-                      <path d="M12 6V18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                      <path d="M6 12H18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
+                  <div className=" p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-shield-check text-white"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
                   </div>
                   <div>
                     <h4 className="font-bold text-white">Team Certification Packages:</h4>
@@ -319,12 +310,8 @@ export default async function Home() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="bg-white p-2 rounded-full">
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" fill="white" />
-                      <path d="M12 6V18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                      <path d="M6 12H18" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
+                  <div className="p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-lightbulb text-white"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
                   </div>
                   <div>
                     <h4 className="font-bold text-white">Compliance Solutions:</h4>
