@@ -116,19 +116,26 @@ export default async function Home() {
 
       <Suspense fallback={<HomeLoading />}>
         {/* Hero Section */}
-        <section className="relative w-full to-teal-600 overflow-hidden bg-[url('/homeBanner.png')]">
-         
-          <div
-          className="container mx-auto px-4 py-16 md:py-24 text-center relative z-10 bg-cover bg-center bg-no-repeat"
-          
-        >
-          <h1 className="text-3xl md:text-5xl font-bold text-[#f8a02e] mb-4">{homeData.hero.title}</h1>
-          <p className="text-white text-lg md:text-xl max-w-3xl mx-auto mb-8">{homeData.hero.subtitle}</p>
+        <section className="relative w-full overflow-hidden bg-teal-600">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/homeBanner.png')" }}
+        ></div>
+
+        {/* Content Container */}
+        <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#f8a02e] mb-4">
+            {homeData.hero.title}
+          </h1>
+          <p className="text-white text-lg md:text-xl max-w-3xl mx-auto mb-8">
+            {homeData.hero.subtitle}
+          </p>
           <Button className="bg-[#f8a02e] hover:bg-yellow-600 text-black font-bold px-8 py-3 text-lg rounded">
             {homeData.hero.buttonText}
           </Button>
         </div>
-        </section>
+      </section>
 
         {/* What is SNB Alliance Section */}
         <section className="py-16 container mx-auto px-4">
